@@ -32,7 +32,7 @@
       <!-- Card principal -->
       <div class="todo-container">
         <header>
-          <h1>TO-DO</h1>
+          <h1>To-do</h1>
         </header>
 
         <!-- barra de pesquisa e filtro -->
@@ -47,7 +47,7 @@
                 placeholder="Tarefa ou lista..."
                 />
               <span id="icon-search" class="material-icons-outlined">search</span>
-              <button id="erase-button">
+              <button id="erase-button" class="hide">
                 <span class="material-icons-outlined">backspace</span>
               </button>
             </form>
@@ -114,17 +114,17 @@
             <p>Excluir</p>
           </div>
         </div>
-      </div>
 
+        <!-- botão add tarefa -->
+        <div class="input-task-pre">
+          <button id="button-input-task">
+            <span class="material-icons-outlined">add_circle_outline</span>
+          </button>
+          <p>Adicionar tarefa</p>
+        </div>
 
         <!-- Formulário para inserir tarefa -->
-        <form id="todo-form">
-
-          <div class="input-task-pre">
-            <button id="button-input-task" class="material-icons-outlined">add_circle_outline</button>
-            <p>Adicionar tarefa</p>
-          </div>
-
+        <form id="todo-form" class="hide">
           <div class="form-control">
             <input
               type="text"
@@ -139,9 +139,9 @@
             </button>
           </div>
         </form>
-
+        
         <!-- formulário para editar tarefa -->
-        <form id="edit-form">
+        <form id="edit-form" class="hide">
           <div class="form-control">
             <input
               type="text"
@@ -155,6 +155,12 @@
             </button>
           </div>
         </form>
+
+      </div>
+
+      
+
+
 
       </div>
     </main>

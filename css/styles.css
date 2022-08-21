@@ -1,0 +1,92 @@
+/* Definição de variaveis de cor */
+:root {
+    --white: #fffafa;
+
+    --gray-500: #929A92;
+
+    --green-100: #7FDB7D;
+    --green-400: #4FA880;
+    --green-900: #147549;
+
+}
+
+/* Geral */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* color: aqua; */
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(50% 50% at 50% 50%, #7FDB7D 0%, #4FA880 100%);
+    /* #7FDB7D; */
+    background-size: cover;
+    /* Para que o gradiente seja cover */
+    -webkit-font-smoothing: antialiased;
+    /* Para que o texto seja antialiased */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: 0.3s;
+}
+
+button>span {
+    pointer-events: none;
+    /* Para o ícone não atrapalhar o botão */
+}
+
+input, select {
+    background-color: transparent;
+    padding:0.875rem 1rem 0.875rem;
+    border: 1px solid var(--green-900);
+    border-radius: 8px;
+}
+
+select {
+    color: var(--green-900);
+    cursor: pointer;
+}
+
+::placeholder {
+    color: var(--gray-500);
+}
+
+.hide {
+    display: none;
+}
+
+.todo-container{
+    max-width: 720px;
+    margin: 3rem auto 7.75rem ;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+h1, h3, h4{
+    color: var(--green-900);
+}
+
+.material-icons-outlined {
+    color: var(--green-900);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
