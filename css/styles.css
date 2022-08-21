@@ -10,6 +10,16 @@
 
 }
 
+/* Icones material google */
+.material-icons-outlined {
+    color: var(--green-900);
+}
+
+.material-icons-outlined.md-32 {
+    font-size: 32px;
+}
+
+
 /* Geral */
 * {
     padding: 0;
@@ -17,6 +27,11 @@
     font-family: 'Poppins', sans-serif;
     /* color: aqua; */
     box-sizing: border-box;
+}
+
+/* Retira borda de seleção de um elemento */
+*:focus {
+    outline: none;
 }
 
 body {
@@ -43,16 +58,20 @@ button>span {
     /* Para o ícone não atrapalhar o botão */
 }
 
+
 input, select {
     background-color: transparent;
-    padding:0.875rem 1rem 0.875rem;
+    padding: 0.7rem 1rem;
     border: 1px solid var(--green-900);
     border-radius: 8px;
+    height: 2.5rem;
+    margin-right: 0.375rem;
 }
 
 select {
     color: var(--green-900);
     cursor: pointer;
+    width: 100%;
 }
 
 ::placeholder {
@@ -63,21 +82,20 @@ select {
     display: none;
 }
 
-.todo-container{
+.todo-container {
+    min-height: 596px;
     max-width: 720px;
-    margin: 3rem auto 7.75rem ;
+    margin: 3rem auto 7.75rem;
     background-color: var(--white);
     padding: 1rem 2rem;
     border-radius: 8px;
 }
 
-h1, h3, h4{
+h1, h3, h4 {
     color: var(--green-900);
 }
 
-.material-icons-outlined {
-    color: var(--green-900);
-}
+
 
 header {
     display: flex;
@@ -85,8 +103,85 @@ header {
     margin-bottom: 1rem;
 }
 
+
+
+/* Estilização da toolbar */
 #toolbar {
     display: flex;
     justify-content: space-between;
 }
 
+#search {
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    max-width: 328px;
+}
+
+#search form span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#filter {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter .filter-select {
+    display: flex;
+    width: 44vw;
+    max-width: 179px;
+}
+
+
+#filter span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Cards tarefas */
+#todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: espace-between;
+}
+
+.card-info {
+    display: flex;
+    
+}
+.card-control{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+.input-task-pre {
+    color: var(--green-900);
+}

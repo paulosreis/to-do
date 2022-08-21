@@ -46,7 +46,7 @@
                 id="search-input"
                 placeholder="Tarefa ou lista..."
                 />
-              <span id="icon-search" class="material-icons-outlined">search</span>
+              <span id="icon-search" class="material-icons-outlined md-32">search</span>
               <button id="erase-button" class="hide">
                 <span class="material-icons-outlined">backspace</span>
               </button>
@@ -55,12 +55,17 @@
 
           <div id="filter">
             <h3>Filtrar:</h3>
-            <select id="filter-select">
-              <option value="all">Todas</option>
-              <option value="done">Feitas</option>
-              <option value="todo">A fazer</option>
-            </select>
-            <span class="material-icons-outlined icon-filter">filter_list</span>
+            <div class="filter-select">
+              <select id="filter-select">
+                <option value="all">Todas</option>
+                <option value="done">Feitas</option>
+                <option value="todo">A fazer</option>
+              </select>
+              <span class="material-icons-outlined icon-filter md-32">filter_list</span>
+
+            </div>
+
+
           </div>
 
         </div>
@@ -68,52 +73,72 @@
 
         <!-- Lista de tarefas no meio do card -->
         <div id="todo-list">
+
           <!-- tarefa item 1 -->
           <div class="todo">
-            <h4>Nome da tarefa 1</h4>
-            <div class="button-on-card">
-              <button class="finish-todo">
-                <span class="material-icons-outlined">done</span>
-              </button>
-              <p>Concluir</p>
+            <div class="card-info">
+              <h4>Nome da tarefa 1</h4>
             </div>
-            <div class="button-on-card">
-              <button class="edit-todo">
-                <span class="material-icons-outlined">edit</span>
-              </button>
-              <p>Editar</p>
-            </div>
-            <div class="button-on-card">
-              <button class="remove-todo">
-                <span class="material-icons-outlined">delete</span>
-              </button>
-              <p>Excluir</p>
+
+            <div class="card-control">              
+              <div class="button-on-card">
+                <button class="finish-todo">
+                  <span class="material-icons-outlined">done</span>
+                </button>
+                <p>Concluir</p>
+              </div>
+
+              <div class="button-on-card">
+                <button class="edit-todo">
+                  <span class="material-icons-outlined">edit</span>
+                </button>
+                <p>Editar</p>
+              </div>
+
+              <div class="button-on-card">
+                <button class="remove-todo">
+                  <span class="material-icons-outlined">delete</span>
+                </button>
+                <p>Excluir</p>
+              </div>
+              
             </div>
           </div>
+          
+          <!-- tarefa item 2 -->
+          <div class="todo">
+
+            <div class="card-info">
+              <h4>Nome da tarefa 1</h4>
+            </div>
+
+            <div class="card-control">
+              
+              <div class="button-on-card">
+                <button class="finish-todo">
+                  <span class="material-icons-outlined">done</span>
+                </button>
+                <p>Concluir</p>
+              </div>
+              <div class="button-on-card">
+                <button class="edit-todo">
+                  <span class="material-icons-outlined">edit</span>
+                </button>
+                <p>Editar</p>
+              </div>
+              <div class="button-on-card">
+                <button class="remove-todo">
+                  <span class="material-icons-outlined">delete</span>
+                </button>
+                <p>Excluir</p>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- tarefa item 2 -->
-        <div class="todo">
-          <h4>Nome da tarefa 1</h4>
-          <div class="button-on-card">
-            <button class="finish-todo">
-              <span class="material-icons-outlined">done</span>
-            </button>
-            <p>Concluir</p>
-          </div>
-          <div class="button-on-card">
-            <button class="edit-todo">
-              <span class="material-icons-outlined">edit</span>
-            </button>
-            <p>Editar</p>
-          </div>
-          <div class="button-on-card">
-            <button class="remove-todo">
-              <span class="material-icons-outlined">delete</span>
-            </button>
-            <p>Excluir</p>
-          </div>
-        </div>
 
         <!-- botão add tarefa -->
         <div class="input-task-pre">
