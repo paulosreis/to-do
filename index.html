@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,151 @@
     <script src="./js/script.js" defer></script>
     <!-- defer faz os arquivos serem carregados somente
         após o html  -->
+    <!-- importa fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet">
+
 
     <!-- material icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
       rel="stylesheet">
   </head>
-  <body>
 
+  <body>
+    <main>
+      <!-- Card principal -->
+      <div class="todo-container">
+        <header>
+          <h1>TO-DO</h1>
+        </header>
+
+        <!-- barra de pesquisa e filtro -->
+        <div id="toolbar">
+
+          <div id="search">
+            <h3>Pesquisar:</h3>
+            <form>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Tarefa ou lista..."
+                />
+              <span id="icon-search" class="material-icons-outlined">search</span>
+              <button id="erase-button">
+                <span class="material-icons-outlined">backspace</span>
+              </button>
+            </form>
+          </div>
+
+          <div id="filter">
+            <h3>Filtrar:</h3>
+            <select id="filter-select">
+              <option value="all">Todas</option>
+              <option value="done">Feitas</option>
+              <option value="todo">A fazer</option>
+            </select>
+            <span class="material-icons-outlined icon-filter">filter_list</span>
+          </div>
+
+        </div>
+
+
+        <!-- Lista de tarefas no meio do card -->
+        <div id="todo-list">
+          <!-- tarefa item 1 -->
+          <div class="todo">
+            <h4>Nome da tarefa 1</h4>
+            <div class="button-on-card">
+              <button class="finish-todo">
+                <span class="material-icons-outlined">done</span>
+              </button>
+              <p>Concluir</p>
+            </div>
+            <div class="button-on-card">
+              <button class="edit-todo">
+                <span class="material-icons-outlined">edit</span>
+              </button>
+              <p>Editar</p>
+            </div>
+            <div class="button-on-card">
+              <button class="remove-todo">
+                <span class="material-icons-outlined">delete</span>
+              </button>
+              <p>Excluir</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- tarefa item 2 -->
+        <div class="todo">
+          <h4>Nome da tarefa 1</h4>
+          <div class="button-on-card">
+            <button class="finish-todo">
+              <span class="material-icons-outlined">done</span>
+            </button>
+            <p>Concluir</p>
+          </div>
+          <div class="button-on-card">
+            <button class="edit-todo">
+              <span class="material-icons-outlined">edit</span>
+            </button>
+            <p>Editar</p>
+          </div>
+          <div class="button-on-card">
+            <button class="remove-todo">
+              <span class="material-icons-outlined">delete</span>
+            </button>
+            <p>Excluir</p>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- Formulário para inserir tarefa -->
+        <form id="todo-form">
+
+          <div class="input-task-pre">
+            <button id="button-input-task" class="material-icons-outlined">add_circle_outline</button>
+            <p>Adicionar tarefa</p>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Insira o nome da tarefa..."
+              />
+            <button type="submit">
+              <span class="material-icons-outlined">done</span>
+            </button>
+            <button id="cancel-input-button">
+              <span class="material-icons-outlined">close</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- formulário para editar tarefa -->
+        <form id="edit-form">
+          <div class="form-control">
+            <input
+              type="text"
+              id="edit-input"
+              />
+            <button type="submit">
+              <span class="material-icons-outlined">done</span>
+            </button>
+            <button id="cancel-edit-button">
+              <span class="material-icons-outlined">close</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </main>
   </body>
+
 </html>
