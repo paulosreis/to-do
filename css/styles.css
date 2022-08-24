@@ -10,6 +10,11 @@
 
 }
 
+.hide {
+    display: none;
+}
+
+
 /* Icones material google */
 .material-icons-outlined {
     color: var(--green-900);
@@ -64,7 +69,7 @@ button>span {
 
 input, select {
     background-color: transparent;
-    padding: 0.7rem 1rem;
+    padding-left: 0.75rem;
     border: 1px solid var(--green-900);
     border-radius: 8px;
     height: 2.5rem;
@@ -82,10 +87,6 @@ select {
 
 ::placeholder {
     color: var(--gray-500);
-}
-
-.hide {
-    display: none;
 }
 
 .todo-container {
@@ -226,3 +227,10 @@ header {
     color: var(--green-900);
     font-size: 0.875rem;
 }
+
+#todo-form .form-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
