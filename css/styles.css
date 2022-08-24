@@ -19,6 +19,9 @@
     font-size: 32px;
 }
 
+.material-icons-outlined.md-52 {
+    font-size: 52px;
+}
 
 /* Geral */
 * {
@@ -66,12 +69,15 @@ input, select {
     border-radius: 8px;
     height: 2.5rem;
     margin-right: 0.375rem;
+    font-size: 1rem;
+    color: var(--green-900);
 }
 
 select {
     color: var(--green-900);
     cursor: pointer;
     width: 100%;
+    font-size: 1rem;
 }
 
 ::placeholder {
@@ -83,6 +89,9 @@ select {
 }
 
 .todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     min-height: 596px;
     max-width: 720px;
     margin: 3rem auto 7.75rem;
@@ -109,6 +118,7 @@ header {
 #toolbar {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 #search {
@@ -156,32 +166,63 @@ header {
 #todo-list {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .todo {
     display: flex;
     flex-direction: row;
-    justify-content: espace-between;
+    background-color: var(--green-400);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    height: 3.5rem;
+    padding-left: 1.0rem;
+    padding-right: 0.5rem;
 }
 
 .card-info {
     display: flex;
-    
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 140px;
+    font-size: 1rem;
 }
-.card-control{
+
+.card-info>h4 {
+    color: var(--white);
+}
+
+.card-control {
     display: flex;
+    justify-content: space-between;
+    width: 10.6875rem;
+    align-items: center;
 }
 
+.button-on-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.625rem;
+    font-weight: bold;
+    color: var(--white);
+}
 
+.button-on-card > button > span {
+    color: var(--white);
+}
 
-
-
-
-
-
-
+/* Formulário de inserção de tarefa*/
 
 
 .input-task-pre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--green-900);
+    font-size: 0.875rem;
 }
