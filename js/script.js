@@ -40,13 +40,31 @@ const saveTodo = (text) => { //Cria card dinamicamente
     buttonDone.classList.add("finish-todo");
     buttonDone.innerHTML = '<span class="material-icons-outlined md-32">done</span>';
     doneBox.appendChild(buttonDone);
-
     const pConcluir = document.createElement("p");
     pConcluir.innerText = 'Concluir';
     doneBox.appendChild(pConcluir);
 
+    const buttonEdit = document.createElement("button");
+    buttonEdit.classList.add("edit-todo");
+    buttonEdit.innerHTML = '<span class="material-icons-outlined md-32">edit</span>';
+    editBox.appendChild(buttonEdit);
+    const pEditar = document.createElement("p");
+    pEditar.innerText = 'Editar';
+    editBox.appendChild(pEditar);
+
+    const buttonDelete = document.createElement("button");
+    buttonDelete.classList.add("remove-todo");
+    buttonDelete.innerHTML = '<span class="material-icons-outlined md-32">delete</span>';
+    deleteBox.appendChild(buttonDelete);
+    const pExcluir = document.createElement("p");
+    pExcluir.innerText = 'Excluir';
+    deleteBox.appendChild(pExcluir);
 
 
+
+    todoList.appendChild(todo);
+
+    todoInput.focus();
 
 
     console.log(todo);

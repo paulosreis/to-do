@@ -192,6 +192,7 @@ header {
 
 .card-info>h4 {
     color: var(--white);
+    text-transform: capitalize;
 }
 
 .card-control {
