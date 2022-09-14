@@ -201,8 +201,8 @@ header {
 
 .card-control {
     display: flex;
-    justify-content: space-between;
-    width: 10.6875rem;
+    /* justify-content: space-between;
+    width: 10.6875rem; */
     align-items: center;
 }
 
@@ -239,3 +239,7 @@ header {
     margin-bottom: 1.5rem;
 }
 
+.button > span > material-icons-outlined.md-32{
+    background-color: aqua;
+    color: var(--white);
+}
