@@ -5,8 +5,15 @@ const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('#todo-list');
 const editInput = document.querySelector('#edit-input');
 const cancelEditButton = document.querySelector('#cancel-edit');
+const buttonAdd = document.querySelector(".input-task-pre");    
 
 // funções
+
+const escondeAdd = () => {
+    todoForm.classList.toggle("hide");
+
+    buttonAdd.classList.toggle("hide");   
+}
 
 const saveTodo = (text) => { //Cria card dinamicamente
 
@@ -78,4 +85,10 @@ document.addEventListener("click", (e) => {
     if(targetEl.classList.contains("remove-todo")){
         parentEl.remove();
     }
+
+    if(targetEl.classList.contains("edit-todo")){
+        console.log("editou")
+    }
+
+    
 })

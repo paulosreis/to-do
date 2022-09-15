@@ -81,7 +81,7 @@
               <button class="finish-todo">
                 <span class="material-icons-outlined md-32">check_box_outline_blank</span>
               </button>
-              <h4>Nome da tarefa 1</h4>
+              <h4 class="edit-todo">Nome da tarefa 1</h4>
             </div>
 
             <button class="remove-todo">
@@ -93,15 +93,15 @@
 
 
         <!-- botão add tarefa -->
-        <div class="hide input-task-pre">
-          <button id="button-input-task">
+        <div class="input-task-pre" onclick="escondeAdd()">
+          <button id="button-input-task" ">
             <span class="material-icons-outlined md-52">add_circle</span>
           </button>
           <p>Adicionar tarefa</p>
         </div>
 
         <!-- Formulário para inserir tarefa -->
-        <form id="todo-form" class="">
+        <form id="todo-form" class="hide">
           <div class="form-control">
             <input
               type="text"
