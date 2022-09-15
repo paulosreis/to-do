@@ -74,4 +74,8 @@ document.addEventListener("click", (e) => {
             targetEl.innerHTML='<span class="material-icons-outlined md-32">check_box_outline_blank</span>';
         }
     }
+
+    if(targetEl.classList.contains("remove-todo")){
+        parentEl.remove();
+    }
 })
