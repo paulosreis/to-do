@@ -9,65 +9,39 @@ const cancelEditButton = document.querySelector('#cancel-edit');
 // funções
 
 const saveTodo = (text) => { //Cria card dinamicamente
-    const todo = document.createElement("div")
-    todo.classList.add("todo")
+    
+    // div.todo
+    const todo = document.createElement("div");
+    todo.classList.add("todo");
 
-    const cardInfo = document.createElement("div")
-    cardInfo.classList.add("card-info")
+    // div.card-info
+    const cardInfo = document.createElement("div");
+    cardInfo.classList.add("card-info");
     todo.appendChild(cardInfo);
 
+    //button.finish-todo
+    const buttonCheck = document.createElement("button");
+    buttonCheck.classList.add("finish-todo");
+    buttonCheck.innerHTML = '<span class="material-icons-outlined md-32">check_box_outline_blank</span>';
+    cardInfo.appendChild(buttonCheck);
+
+    // h4
     const todoTitle = document.createElement("h4");
     todoTitle.innerText = text;
     cardInfo.appendChild(todoTitle);
 
-    const cardControl = document.createElement("div");
-    cardControl.classList.add("card-control")
-    todo.appendChild(cardControl);
-
-    const doneBox = document.createElement("div");
-    doneBox.classList.add("button-on-card")
-    cardControl.appendChild(doneBox);
-
-    const editBox = document.createElement("div");
-    editBox.classList.add("button-on-card")
-    cardControl.appendChild(editBox);
-
-    const deleteBox = document.createElement("div");
-    deleteBox.classList.add("button-on-card")
-    cardControl.appendChild(deleteBox);
-
-    const buttonDone = document.createElement("button");
-    buttonDone.classList.add("finish-todo");
-    buttonDone.innerHTML = '<span class="material-icons-outlined md-32">done</span>';
-    doneBox.appendChild(buttonDone);
-    const pConcluir = document.createElement("p");
-    pConcluir.innerText = 'Concluir';
-    doneBox.appendChild(pConcluir);
-
-    const buttonEdit = document.createElement("button");
-    buttonEdit.classList.add("edit-todo");
-    buttonEdit.innerHTML = '<span class="material-icons-outlined md-32">edit</span>';
-    editBox.appendChild(buttonEdit);
-    const pEditar = document.createElement("p");
-    pEditar.innerText = 'Editar';
-    editBox.appendChild(pEditar);
-
-    const buttonDelete = document.createElement("button");
-    buttonDelete.classList.add("remove-todo");
-    buttonDelete.innerHTML = '<span class="material-icons-outlined md-32">delete</span>';
-    deleteBox.appendChild(buttonDelete);
-    const pExcluir = document.createElement("p");
-    pExcluir.innerText = 'Excluir';
-    deleteBox.appendChild(pExcluir);
-
-
-
+    //button.remove-todo
+    const buttonRemove = document.createElement("button");
+    buttonRemove.classList.add("remove-todo");
+    buttonRemove.innerHTML = '<span class="material-icons-outlined md-32">delete</span>';
+    todo.appendChild(buttonRemove);
+     
+    //add card a lista de cards
     todoList.appendChild(todo);
-
+    //mantem o campo add aberto
     todoInput.focus();
 
-
-    console.log(todo);
+    // console.log(todo);
 
 
 }

@@ -33,7 +33,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    /* color: aqua; */
     box-sizing: border-box;
 }
 
@@ -176,19 +175,18 @@ header {
 
 .todo {
     display: flex;
-    flex-direction: row;
     background-color: var(--green-400);
     border-radius: 8px;
     margin-bottom: 0.5rem;
     height: 4rem;
-    padding-left: 1.0rem;
+    padding-left: 0.5rem;
     padding-right: 0.5rem;
+    justify-content: space-between;
 }
 
 .card-info {
     display: flex;
     flex-grow: 1;
-    justify-content: flex-start;
     align-items: center;
     min-width: 140px;
     font-size: 1rem;
@@ -197,16 +195,28 @@ header {
 .card-info>h4 {
     color: var(--white);
     text-transform: capitalize;
+    max-width: 56ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.card-control {
-    display: flex;
-    /* justify-content: space-between;
-    width: 10.6875rem; */
-    align-items: center;
+.finish-todo>span {
+    color: var(--white);
+    margin-right: 0.25rem;
 }
 
-.button-on-card {
+.remove-todo>span {
+    color: var(--white);
+}
+
+.doned {
+    text-decoration: line-through;
+    background-color: var(--gray-500);
+}
+
+
+/* .button-on-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -219,7 +229,7 @@ header {
 
 .button-on-card>button>span {
     color: var(--white);
-}
+} */
 
 /* Formulário de inserção de tarefa*/
 
@@ -237,9 +247,4 @@ header {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-}
-
-.button > span > material-icons-outlined.md-32{
-    background-color: aqua;
-    color: var(--white);
 }
