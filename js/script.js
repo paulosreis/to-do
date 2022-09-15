@@ -9,7 +9,7 @@ const cancelEditButton = document.querySelector('#cancel-edit');
 // funções
 
 const saveTodo = (text) => { //Cria card dinamicamente
-    
+
     // div.todo
     const todo = document.createElement("div");
     todo.classList.add("todo");
@@ -35,7 +35,7 @@ const saveTodo = (text) => { //Cria card dinamicamente
     buttonRemove.classList.add("remove-todo");
     buttonRemove.innerHTML = '<span class="material-icons-outlined md-32">delete</span>';
     todo.appendChild(buttonRemove);
-     
+
     //add card a lista de cards
     todoList.appendChild(todo);
     //mantem o campo add aberto
@@ -60,3 +60,18 @@ todoForm.addEventListener("submit", (e) => {
     }
 
 });
+
+
+document.addEventListener("click", (e) => {
+    const targetEl = e.target;
+    const parentEl = targetEl.closest(".todo");
+    
+
+    if(targetEl.classList.contains("finish-todo")){
+        if(parentEl.classList.toggle("done")){
+            targetEl.innerHTML='<span class="material-icons-outlined md-32">check_box</span>';
+        }else{
+            targetEl.innerHTML='<span class="material-icons-outlined md-32">check_box_outline_blank</span>';
+        }
+    }
+})

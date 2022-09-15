@@ -210,26 +210,14 @@ header {
     color: var(--white);
 }
 
-.doned {
-    text-decoration: line-through;
+.done {
     background-color: var(--gray-500);
 }
 
-
-/* .button-on-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 0.625rem;
-    font-weight: bold;
-    color: var(--white);
+.done h4 {
+    text-decoration: line-through;
 }
 
-.button-on-card>button>span {
-    color: var(--white);
-} */
 
 /* Formulário de inserção de tarefa*/
 
