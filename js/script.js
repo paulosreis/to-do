@@ -5,15 +5,16 @@ const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('#todo-list');
 const editInput = document.querySelector('#edit-input');
 const cancelEditButton = document.querySelector('#cancel-edit');
-const buttonAdd = document.querySelector(".input-task-pre");    
+const buttonAdd = document.querySelector("#button-input-task");
 
 // funções
 
-const escondeAdd = () => {
-    todoForm.classList.toggle("hide");
 
-    buttonAdd.classList.toggle("hide");   
+const toggleAdd = () => {
+    todoForm.classList.toggle("hide");
+    buttonAdd.classList.toggle("hide");
 }
+
 
 const saveTodo = (text) => { //Cria card dinamicamente
 
@@ -69,26 +70,49 @@ todoForm.addEventListener("submit", (e) => {
 });
 
 
+
 document.addEventListener("click", (e) => {
     const targetEl = e.target;
     const parentEl = targetEl.closest(".todo");
-    
+    const parentElForm = targetEl.closest("form");
 
-    if(targetEl.classList.contains("finish-todo")){
-        if(parentEl.classList.toggle("done")){
-            targetEl.innerHTML='<span class="material-icons-outlined md-32">check_box</span>';
-        }else{
-            targetEl.innerHTML='<span class="material-icons-outlined md-32">check_box_outline_blank</span>';
+
+
+    if (targetEl.classList.contains("finish-todo")) {
+        if (parentEl.classList.toggle("done")) {
+            targetEl.innerHTML = '<span class="material-icons-outlined md-32">check_box</span>';
+        } else {
+            targetEl.innerHTML = '<span class="material-icons-outlined md-32">check_box_outline_blank</span>';
         }
     }
 
-    if(targetEl.classList.contains("remove-todo")){
+    if (targetEl.classList.contains("remove-todo")) {
         parentEl.remove();
     }
 
-    if(targetEl.classList.contains("edit-todo")){
+    if (targetEl.classList.contains("edit-todo")) {
         console.log("editou")
     }
 
-    
+
+    if (targetEl == document.querySelector("#cancel-input-button")) {
+        todoInput.value = '';
+        parentElForm.classList.toggle("hide");
+        buttonAdd.classList.toggle("hide");
+    }
+
+    // if (targetEl.classList.contains("form-control")) {
+    //     console.log("ta dentro");
+    // } else {
+    //     if (!(todoForm.classList.contains("hide"))) {
+    //         if (targetEl != buttonAdd) {
+    //             if (true) {
+    //                 console.log('fora');
+    //             }
+    //         }
+    //     }
+
+    // }
+
+
 })

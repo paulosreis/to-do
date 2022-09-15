@@ -24,8 +24,8 @@
     font-size: 32px;
 }
 
-.material-icons-outlined.md-52 {
-    font-size: 52px;
+.material-icons-outlined.md-64 {
+    font-size: 64px;
 }
 
 /* Geral */
@@ -212,23 +212,22 @@ header {
 
 .done {
     background-color: var(--gray-500);
+    transition-delay: 50ms;
 }
 
 .done h4 {
     text-decoration: line-through;
+    transition-delay: 50ms;
 }
 
 
 /* Formulário de inserção de tarefa*/
 
 
-.input-task-pre {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--green-900);
-    font-size: 0.875rem;
+#button-input-task {
+    margin-bottom: 0.75rem;
+    max-width: 4rem;
+    align-self: center;
 }
 
 #todo-form .form-control {
@@ -236,8 +235,15 @@ header {
     justify-content: center;
     margin-bottom: 1.5rem;
 }
+
 #edit-form .form-control {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
+}
+
+.form-control > input {
+    width: 100%;
+    /* cursor: text; */
+    /* pointer-events: none; */
 }

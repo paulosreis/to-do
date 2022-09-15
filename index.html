@@ -46,7 +46,7 @@
                 id="search-input"
                 placeholder="Buscar tarefa"
                 />
-              <span id="icon-search"  class="material-icons-outlined md-32">search</span> 
+              <span id="icon-search" class="material-icons-outlined md-32">search</span>
               <button id="erase-button" class="hide">
                 <span class="material-icons-outlined">backspace</span>
               </button>
@@ -76,7 +76,7 @@
 
           <!-- tarefa item 1 -->
           <div class="todo">
-            
+
             <div class="card-info">
               <button class="finish-todo">
                 <span class="material-icons-outlined md-32">check_box_outline_blank</span>
@@ -93,12 +93,10 @@
 
 
         <!-- botão add tarefa -->
-        <div class="input-task-pre" onclick="escondeAdd()">
-          <button id="button-input-task" ">
-            <span class="material-icons-outlined md-52">add_circle</span>
-          </button>
-          <p>Adicionar tarefa</p>
-        </div>
+        <button id="button-input-task" onclick="toggleAdd()">
+          <span class="material-icons-outlined md-64">add_circle</span>
+        </button>
+
 
         <!-- Formulário para inserir tarefa -->
         <form id="todo-form" class="hide">
@@ -109,14 +107,14 @@
               placeholder="Insira o nome da tarefa..."
               />
             <button type="submit">
-              <span class="material-icons-outlined">done</span>
+              <span class="material-icons-outlined md-32">done</span>
             </button>
             <button id="cancel-input-button">
-              <span class="material-icons-outlined">close</span>
+              <span class="material-icons-outlined md-32">close</span>
             </button>
           </div>
         </form>
-        
+
         <!-- formulário para editar tarefa -->
         <form id="edit-form" class="hide">
           <div class="form-control">
@@ -133,13 +131,7 @@
           </div>
         </form>
 
-      </div>
-
-      
-
-
-
-      </div>
+      </></div>
     </main>
   </body>
 
