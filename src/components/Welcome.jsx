@@ -51,7 +51,7 @@ function Welcome() {
             return
         } else if (registerInformation.password !== registerInformation.confirmPassword) {
             alert("Confirmação de senha diferente da principal")
-            return 
+            return
         }
         createUserWithEmailAndPassword(auth, registerInformation.email, registerInformation.password)
             .then(() => {
@@ -64,121 +64,124 @@ function Welcome() {
 
     return (
         <div className="welcome">
+            <h1>To-do</h1>
 
+            <main>
+                <div className="main-form">
+                    {isRegistering ? (
 
-            <h1>Seja bem vindo</h1>
+                        <form className="form-register">
+                            <h3>Faça seu cadastro</h3>
+                            <div>
+                                <input
+                                    id="email-address"
+                                    name="email"
+                                    type="email"
+                                    value={registerInformation.email}
+                                    onChange={(e) =>
+                                        setRegisterInfomartion({
+                                            ...registerInformation,
+                                            email: e.target.value
+                                        })
+                                    }
+                                    autoComplete="email"
+                                    required
+                                    placeholder="Email"
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    id="email-address-confirm"
+                                    name="email"
+                                    type="email"
+                                    value={registerInformation.confirmEmail}
+                                    onChange={(e) =>
+                                        setRegisterInfomartion({
+                                            ...registerInformation,
+                                            confirmEmail: e.target.value
+                                        })
+                                    }
+                                    autoComplete="email"
+                                    required
+                                    placeholder="Confirmar email"
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    value={registerInformation.password}
+                                    onChange={(e) =>
+                                        setRegisterInfomartion({
+                                            ...registerInformation,
+                                            password: e.target.value
+                                        })
+                                    }
+                                    autoComplete="current-password"
+                                    required
+                                    placeholder="Senha"
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    id="password-confirm"
+                                    name="password-confirm"
+                                    type="password"
+                                    value={registerInformation.confirmPassword}
+                                    onChange={(e) =>
+                                        setRegisterInfomartion({
+                                            ...registerInformation,
+                                            confirmPassword: e.target.value
+                                        })
+                                    }
+                                    autoComplete="current-password"
+                                    required
+                                    placeholder="Confirmar senha"
+                                />
+                            </div>
+                            <button onClick={handleRegister}>Registrar</button>
+                            <button onClick={() => setIsRegistering(false)}>Cancelar</button>
+                        </form>
 
+                    ) : (
 
-            <div className="main-form">
-                {isRegistering ? (
-
-                    <div className="form-register">
-                        <h3>Faça seu cadastro</h3>
-                        <div>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                value={registerInformation.email}
-                                onChange={(e) =>
-                                    setRegisterInfomartion({
-                                        ...registerInformation,
-                                        email: e.target.value
-                                    })
-                                }
-                                autoComplete="email"
-                                required
-                                placeholder="Email"
-                            />
+                        <div className="form-login">
+                            <div>
+                                <input
+                                    id="email-address"
+                                    name="email"
+                                    type="email"
+                                    onChange={handleEmailChange}
+                                    value={email}
+                                    autoComplete="email"
+                                    required
+                                    placeholder="Email"
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    onChange={handlePasswordChange}
+                                    value={password}
+                                    autoComplete="current-password"
+                                    required
+                                    placeholder="Senha"
+                                />
+                            </div>
+                            <button onClick={handleSignIn}>Entrar</button>
+                            <button onClick={() => setIsRegistering(true)}>Criar uma conta</button>
                         </div>
-                        <div>
-                            <input
-                                id="email-address-confirm"
-                                name="email"
-                                type="email"
-                                value={registerInformation.confirmEmail}
-                                onChange={(e) =>
-                                    setRegisterInfomartion({
-                                        ...registerInformation,
-                                        confirmEmail: e.target.value
-                                    })
-                                }
-                                autoComplete="email"
-                                required
-                                placeholder="Confirmar email"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                id="password"
-                                name="password"
-                                type="password"
-                                value={registerInformation.password}
-                                onChange={(e) =>
-                                    setRegisterInfomartion({
-                                        ...registerInformation,
-                                        password: e.target.value
-                                    })
-                                }
-                                autoComplete="current-password"
-                                required
-                                placeholder="Senha"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                id="password-confirm"
-                                name="password-confirm"
-                                type="password"
-                                value={registerInformation.confirmPassword}
-                                onChange={(e) =>
-                                    setRegisterInfomartion({
-                                        ...registerInformation,
-                                        confirmPassword: e.target.value
-                                    })
-                                }
-                                autoComplete="current-password"
-                                required
-                                placeholder="Confirmar senha"
-                            />
-                        </div>
-                        <button onClick={handleRegister}>Registrar</button>
-                        <button onClick={() => setIsRegistering(false)}>Cancelar</button>
-                    </div>
 
-                ) : (
+                    )}
+                </div>
 
-                    <div className="form-login">
-                        <div>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                onChange={handleEmailChange}
-                                value={email}
-                                autoComplete="email"
-                                required
-                                placeholder="Email"
-                            />
-                        </div>
-                        <div>
-                            <input
-                                id="password"
-                                name="password"
-                                type="password"
-                                onChange={handlePasswordChange}
-                                value={password}
-                                autoComplete="current-password"
-                                required
-                                placeholder="Senha"
-                            />
-                        </div>
-                        <button onClick={handleSignIn}>Entrar</button>
-                        <button onClick={() => setIsRegistering(true)}>Criar uma conta</button>
-                    </div>
+            </main>
 
-                )}
-            </div>
+
+
 
 
 

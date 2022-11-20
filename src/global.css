@@ -28,6 +28,10 @@
     font-size: 64px;
 }
 
+.material-icons-outlined.md-40 {
+    font-size: 40px;
+}
+
 /* Geral */
 * {
     padding: 0;
