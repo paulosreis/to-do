@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <!-- importa o css -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- importa o javascript -->
+    <script src="./js/script.js" defer></script>
+    <!-- defer faz os arquivos serem carregados somente
+        após o html  -->
+    <!-- importa fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet">
+
+
+    <!-- material icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+      <!-- Card principal -->
+      <div class="todo-container">
+        <header>
+          <h1>To-do</h1>
+        </header>
+
+        <!-- barra de pesquisa e filtro -->
+        <div id="toolbar">
+
+          <div id="search">
+            <!-- <h3>Pesquisar:</h3> -->
+            <form>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar tarefa"
+                />
+              <span id="icon-search" class="material-icons-outlined md-32">search</span>
+              <button id="erase-button" class="hide">
+                <span class="material-icons-outlined">backspace</span>
+              </button>
+            </form>
+          </div>
+
+          <div id="filter">
+            <!-- <h3>Filtrar:</h3> -->
+            <div class="filter-select">
+              <span class="material-icons-outlined icon-filter md-32">filter_list</span>
+              <select id="filter-select">
+                <option value="all">Todas</option>
+                <option value="done">Feitas</option>
+                <option value="todo">A fazer</option>
+              </select>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- Lista de tarefas no meio do card -->
+        <div id="todo-list">
+
+          <!-- tarefa item 1 -->
+          <div class="todo">
+
+            <div class="card-info">
+              <button class="finish-todo">
+                <span class="material-icons-outlined md-32">check_box_outline_blank</span>
+              </button>
+              <h4 class="edit-todo">Nome da tarefa 1</h4>
+            </div>
+
+            <button class="remove-todo">
+              <span class="material-icons-outlined md-32">delete</span>
+            </button>
+          </div>
+
+        </div>
+
+
+        <!-- botão add tarefa -->
+        <button id="button-input-task" onclick="toggleAdd()">
+          <span class="material-icons-outlined md-64">add_circle</span>
+        </button>
+
+
+        <!-- Formulário para inserir tarefa -->
+        <form id="todo-form" class="hide">
+          <div class="form-control">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Insira o nome da tarefa..."
+              />
+            <button type="submit">
+              <span class="material-icons-outlined md-32">done</span>
+            </button>
+            <button id="cancel-input-button">
+              <span class="material-icons-outlined md-32">close</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- formulário para editar tarefa -->
+        <form id="edit-form" class="hide">
+          <div class="form-control">
+            <input
+              type="text"
+              id="edit-input"
+              />
+            <button type="submit">
+              <span class="material-icons-outlined">done</span>
+            </button>
+            <button id="cancel-edit-button">
+              <span class="material-icons-outlined">close</span>
+            </button>
+          </div>
+        </form>
+
+      </></div>
+    </main>
+  </body>
+
+</html>
