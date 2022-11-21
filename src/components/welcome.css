@@ -1,0 +1,55 @@
+.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    width: 30rem;
+    height: 25rem;
+    border-radius: 16px;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.botao-entrar, .botao-registrar, .botao-cancelar {
+    background-color: var(--green-400);
+    width: 330px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.botao-cancelar {
+    margin: 0;
+    background-color: #FF6347;
+}
+
+.criar-conta {
+    font-size: 1rem;
+    color: var(--green-900);
+    font-weight: bold;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+#email-address-login, 
+#email-address-register,
+#email-address-confirm,
+#password-register {
+    margin-bottom: 0.5rem;
+}
+
+.criar-conta{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--green-900);
+}

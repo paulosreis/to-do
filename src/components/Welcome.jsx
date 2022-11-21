@@ -6,6 +6,8 @@ import {
 import { auth } from "../firebase";
 import { useNavigate } from 'react-router-dom';
 
+import './welcome.css';
+
 function Welcome() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -64,17 +66,17 @@ function Welcome() {
 
     return (
         <div className="welcome">
-            <h1>To-do</h1>
 
-            <main>
+            <main className="container-login">
+                <h1 className="titulo">To-do</h1>
                 <div className="main-form">
                     {isRegistering ? (
 
-                        <form className="form-register">
-                            <h3>Faça seu cadastro</h3>
+                        <div className="form-register">
+                            <h3 className="criar-conta">Criar nova conta</h3>
                             <div>
                                 <input
-                                    id="email-address"
+                                    id="email-address-register"
                                     name="email"
                                     type="email"
                                     value={registerInformation.email}
@@ -108,7 +110,7 @@ function Welcome() {
                             </div>
                             <div>
                                 <input
-                                    id="password"
+                                    id="password-register"
                                     name="password"
                                     type="password"
                                     value={registerInformation.password}
@@ -140,16 +142,16 @@ function Welcome() {
                                     placeholder="Confirmar senha"
                                 />
                             </div>
-                            <button onClick={handleRegister}>Registrar</button>
-                            <button onClick={() => setIsRegistering(false)}>Cancelar</button>
-                        </form>
+                            <button className="botao-registrar" onClick={handleRegister}>Registrar</button>
+                            <button className="botao-cancelar" onClick={() => setIsRegistering(false)}>Cancelar</button>
+                        </div>
 
                     ) : (
 
                         <div className="form-login">
                             <div>
                                 <input
-                                    id="email-address"
+                                    id="email-address-login"
                                     name="email"
                                     type="email"
                                     onChange={handleEmailChange}
@@ -162,7 +164,7 @@ function Welcome() {
                             <div>
                                 <input
                                     id="password"
-                                    name="password"
+                                    name="password-login"
                                     type="password"
                                     onChange={handlePasswordChange}
                                     value={password}
@@ -171,8 +173,8 @@ function Welcome() {
                                     placeholder="Senha"
                                 />
                             </div>
-                            <button onClick={handleSignIn}>Entrar</button>
-                            <button onClick={() => setIsRegistering(true)}>Criar uma conta</button>
+                            <button type="submit" className="botao-entrar"onClick={handleSignIn}>Entrar</button>
+                            <button className="criar-conta"onClick={() => setIsRegistering(true)}>Criar uma conta</button>
                         </div>
 
                     )}
