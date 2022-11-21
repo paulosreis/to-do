@@ -45,6 +45,11 @@
 #email-address-confirm,
 #password-register {
     margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+#password, #password-confirm {
+    width: 100%;
 }
 
 .criar-conta{
