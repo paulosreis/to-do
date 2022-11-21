@@ -12,7 +12,7 @@
 }
 
 .botao-entrar, .botao-registrar, .botao-cancelar {
-    background-color: var(--green-400);
+    background-color: var(--green-900);
     width: 330px;
     height: 40px;
     border-radius: 8px;
@@ -37,6 +37,7 @@
 .form-login {
     display: flex;
     flex-direction: column;
+    background-color: transparent;
 }
 
 #email-address-login, 
