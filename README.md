@@ -1,6 +1,6 @@
 # To-do list
 
-[https://trab-todo-list.netlify.app](https://trab-todo-list.netlify.app)
+[Aplicação em produção](https://trab-todo-list.netlify.app)
 
 Aplicação feita com ReactJs + Firebase
 
@@ -24,4 +24,5 @@ npm run dev
 
 ## Links
 
+[Aplicação em produção (deploy)](https://trab-todo-list.netlify.app)
 [Repositório no github](https://github.com/paulosreis/todo-list)
