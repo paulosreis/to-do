@@ -8,7 +8,8 @@ Funcionalidades(até agora):
 - Autenticação;
 - Criar conta;
 - Adicionar, visualizar, editar e deletar tarefas do usuário;
-- Modificar status das tarefas.
+- Modificar status das tarefas;
+- Buscar por tarefa.
 
 ## Execução
 
@@ -25,4 +26,5 @@ npm run dev
 ## Links
 
 [Aplicação em produção (deploy)](https://trab-todo-list.netlify.app)
+
 [Repositório no github](https://github.com/paulosreis/todo-list)
