@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../firebase.js";
 import { useNavigate } from "react-router-dom";
@@ -111,15 +111,20 @@ function Homepage() {
     };
 
     // Search
+    // useMemo p/ executar busca somente se houver alterações no input ou array de todos
+    const filtredTodos = useMemo(() => {
+        const lowerSearch = search.toLowerCase();
 
-    const filtredTodos = listTodos
-        .filter((todo) => todo.todo.toLowerCase().includes(search.toLowerCase()));
+        return listTodos.filter((todo) =>
+            todo.todo.toLowerCase().includes(lowerSearch)
+        );
+    }, [search][listTodos]);
 
     const eraseButton = () => {
-        if(!search){
+        if (!search) {
             return
         }
-        setSearch("");        
+        setSearch("");
     }
 
     // REnderização da pag
