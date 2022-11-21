@@ -13,6 +13,7 @@ function Homepage() {
     const [listTodos, setListTodos] = useState([]);
     const [isEdit, setIsEdit] = useState(false);
     const [tempUidd, setTempUidd] = useState("");
+    const [search, setSearch] = useState("");
 
     const navigate = useNavigate();
 
@@ -109,6 +110,19 @@ function Homepage() {
         setIsEdit(false);
     };
 
+    // Search
+
+    const filtredTodos = listTodos
+        .filter((todo) => todo.todo.toLowerCase().includes(search.toLowerCase()));
+
+    const eraseButton = () => {
+        if(!search){
+            return
+        }
+        setSearch("");        
+    }
+
+    // REnderização da pag
     return (
         <div>
             <header>
@@ -127,17 +141,19 @@ function Homepage() {
                 <section id="toolbar">
                     <div id="search">
                         {/* <!-- <h3>Pesquisar:</h3> --> */}
-                        <form>
+                        <div className="form">
                             <input
                                 type="text"
                                 id="search-input"
+                                value={search}
+                                onChange={(ev) => setSearch(ev.target.value)}
                                 placeholder="Buscar tarefa"
                             />
-                            <span id="icon-search" className="material-icons-outlined md-32">search</span>
-                            <button id="erase-button" className="hide">
-                                <span className="material-icons-outlined">backspace</span>
+                            <button onClick={eraseButton}>
+                                <span id="icon-search" className="material-icons-outlined md-32">{search ? 'backspace' : 'search'}</span>
                             </button>
-                        </form>
+
+                        </div>
                     </div>
 
                     <div id="filter">
@@ -158,7 +174,7 @@ function Homepage() {
                 {/* Lista de tarefas no meio do card  */}
                 <section id="todo-list" >
                     {
-                        listTodos.map(todo => (
+                        filtredTodos.map(todo => (
                             <div className={todo.completed ? 'todo done' : 'todo'}>
                                 <div className="card-info">
                                     <button className="finish-todo" onClick={() => toggleComplete(todo)}>

@@ -67,12 +67,14 @@ h1 {
     /* width: 100%; */
 }
 
-#search form {
+#search .form {
     display: flex;
+    align-items: center;
 }
 
 #search input {
     width: 100vw;
+    height: 2.375rem;
     /* max-width: 328px; */
 }
 
