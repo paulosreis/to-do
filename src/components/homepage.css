@@ -200,10 +200,7 @@ h1 {
     color: red;
 }
 
-#button-input-task span{
+#cancel-edit-button span{
     color: red;
 }
 
-#button-input-task span {
-    color: var(--green-900);
-  }
