@@ -177,7 +177,7 @@ function Homepage() {
                                 placeholder="Buscar tarefa"
                             />
                             <button onClick={eraseButton}>
-                                <span id="icon-search" className="material-icons-outlined md-32">{search ? 'backspace' : 'search'}</span>
+                                <span id="icon-search" className={search ? 'material-icons-outlined md-32 red' : 'material-icons-outlined md-32'}>{search ? 'backspace' : 'search'}</span>
                             </button>
 
                         </div>
