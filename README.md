@@ -25,6 +25,8 @@ npm run dev
 
 ## Links
 
+[Design no figma](https://www.figma.com/file/itnC1EvaD05sm0kNGeyko7/Web?node-id=0%3A1&t=owCNeuenYTJNk2Hw-0)
+
 [Aplicação em produção (deploy)](https://trab-todo-list.netlify.app)
 
 [Repositório no github](https://github.com/paulosreis/todo-list)
