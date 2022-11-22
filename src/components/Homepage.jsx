@@ -218,7 +218,7 @@ function Homepage() {
 
                                         <button className="remove-todo"
                                             onClick={() => handleDelete(todo.uidd)}>
-                                            <span className="material-icons-outlined md-32 red">delete</span>
+                                            <span className="material-icons-outlined md-32">delete</span>
                                         </button>
                                     </div>
 
