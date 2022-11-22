@@ -196,7 +196,7 @@ h1 {
     /* pointer-events: none; */
 }
 
-#cancel-edit-button span{
+#cancel-input-button span{
     color: red;
 }
 
