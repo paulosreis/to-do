@@ -163,6 +163,14 @@ h1 {
     transition-delay: 50ms;
 }
 
+.notask{
+    display: flex;
+    justify-content: center;
+    padding-top: 8rem;
+    color: var(--gray-500);
+    font-size: 1.1rem;
+}
+
 
 /* Formulário de inserção de tarefa*/
 

@@ -203,24 +203,31 @@ function Homepage() {
 
                 {/* Lista de tarefas no meio do card  */}
                 <section id="todo-list" >
+
                     {
-                        filtredTodos.map(todo => (
-                            <div className={todo.completed ? 'todo done' : 'todo'}>
-                                <div className="card-info">
-                                    <button className="finish-todo" onClick={() => toggleComplete(todo)}>
-                                        <span className="material-icons-outlined md-32">{todo.completed ? 'check_box' : 'check_box_outline_blank'}</span>
-                                    </button>
-                                    <h4 className="edit-todo" onClick={() => handleUpdate(todo)}>{todo.todo}</h4>
-                                </div>
+                        listTodos.length > 0 ? (<>
+                            {
+                                filtredTodos.map(todo => (
+                                    <div className={todo.completed ? 'todo done' : 'todo'}>
+                                        <div className="card-info">
+                                            <button className="finish-todo" onClick={() => toggleComplete(todo)}>
+                                                <span className="material-icons-outlined md-32">{todo.completed ? 'check_box' : 'check_box_outline_blank'}</span>
+                                            </button>
+                                            <h4 className="edit-todo" onClick={() => handleUpdate(todo)}>{todo.todo}</h4>
+                                        </div>
 
-                                <button className="remove-todo"
-                                    onClick={() => handleDelete(todo.uidd)}>
-                                    <span className="material-icons-outlined md-32">delete</span>
-                                </button>
-                            </div>
+                                        <button className="remove-todo"
+                                            onClick={() => handleDelete(todo.uidd)}>
+                                            <span className="material-icons-outlined md-32">delete</span>
+                                        </button>
+                                    </div>
 
-                        ))
+                                ))
+                            }
+
+                        </>) : (<div className="notask"> <p>Você ainda não possui nenhuma tarefa</p></div>)
                     }
+
                 </section>
 
 
