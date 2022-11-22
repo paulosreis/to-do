@@ -14,6 +14,14 @@ function Homepage() {
     const [isEdit, setIsEdit] = useState(false);
     const [tempUidd, setTempUidd] = useState("");
     const [search, setSearch] = useState("");
+    const [selectValue, setSelectValue] = useState(1);
+    const listSelect = [
+        { id: 1, name: 'Todas' },
+        { id: 2, name: 'Feitas' },
+        { id: 3, name: 'A fazer' },
+    ];
+
+
 
     const navigate = useNavigate();
 
@@ -110,6 +118,20 @@ function Homepage() {
         setIsEdit(false);
     };
 
+    // Select
+    // const selectedTodos = useMemo(() => {
+
+    //     if(selectValue === 2){
+    //         return listTodos.filter((todo) =>
+    //             todo.completed = true
+    //         );
+    //     }
+
+    //     return listTodos.filter((todo) =>
+    //         todo.todo.toLowerCase().includes(lowerSearch)
+    //     );
+    // }, [selectValue][listTodos]);
+
     // Search
     // useMemo p/ executar busca somente se houver alterações no input ou array de todos
     const filtredTodos = useMemo(() => {
@@ -165,10 +187,13 @@ function Homepage() {
                         {/* <!-- <h3>Filtrar:</h3> --> */}
                         <div className="filter-select">
                             <span className="material-icons-outlined icon-filter md-32">filter_list</span>
-                            <select id="filter-select">
-                                <option value="all">Todas</option>
-                                <option value="done">Feitas</option>
-                                <option value="todo">A fazer</option>
+                            <select
+                                value={selectValue}
+                                onChange={e => setSelectValue(e.target.value)}
+                                id="filter-select">
+                                {listSelect.map((item) => (
+                                    <option value={item.id}>{item.name}</option>
+                                ))}
                             </select>
 
                         </div>
