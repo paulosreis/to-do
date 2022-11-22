@@ -203,3 +203,7 @@ h1 {
 #button-input-task span{
     color: red;
 }
+
+#button-input-task span {
+    color: var(--green-900);
+  }
