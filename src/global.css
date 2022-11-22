@@ -32,6 +32,10 @@
     font-size: 40px;
 }
 
+.material-icons-outlined.red {
+    color: red;
+}
+
 /* Geral */
 * {
     padding: 0;

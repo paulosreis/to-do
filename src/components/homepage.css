@@ -196,11 +196,3 @@ h1 {
     /* pointer-events: none; */
 }
 
-#cancel-input-button span{
-    color: red;
-}
-
-#cancel-edit-button span{
-    color: red;
-}
-

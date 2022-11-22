@@ -249,7 +249,7 @@ function Homepage() {
                                 <span className="material-icons-outlined md-32">done</span>
                             </button>
                             <button id="cancel-edit-button" onClick={toggleAdd}>
-                                <span className="material-icons-outlined md-32">close</span>
+                                <span className="material-icons-outlined md-32 red">close</span>
                             </button>
                         </form>
 
@@ -268,7 +268,7 @@ function Homepage() {
                                 <span className="material-icons-outlined md-32">done</span>
                             </button>
                             <button id="cancel-input-button" onClick={toggleAdd}>
-                                <span className="material-icons-outlined md-32">close</span>
+                                <span className="material-icons-outlined md-32 red">close</span>
                             </button>
                         </form>
 
